@@ -1,0 +1,13 @@
+services:
+  laptopstore:
+    build: .
+    ports:
+      - "8086:8086"
+    volumes:
+      - laptopstore_data:/app/data
+      - laptopstore_logs:/app/logs
+    restart: unless-stopped
+
+volumes:
+  laptopstore_data:
+  laptopstore_logs:
